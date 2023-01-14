@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+gallery
+{% endblock %}
+{% block content %}
+<div class="row d-flex justify-content-center ">
+    {%for my_galleries in my_gallery%}
+  <div class="col p-3 d-flex align-items-center justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="{{my_galleries.gallery_image.url}}" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{my_galleries.gallery_img_title}}</h5>
+        <p class="card-text">{{my_galleries.gallery_img_about}}</p>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

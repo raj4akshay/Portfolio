@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{%block link%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'javascript/first.js'%}"/>
+{%endblock%}
+{% block title %}
+contact_me
+{% endblock %}
+{% block content %}
+
+<!--Section: Contact v.2-->
+<div class="container z-depth-1 my-5 px-0">
+  <!--Section: Content-->
+    {% load static %}
+  <section class="my-md-5"
+    style="background-image: linear-gradient(black,white); background-size: cover; background-position: center center;">
+    <div class="rounded p-5">
+      <!-- Section heading -->
+      <h3 class="text-center font-weight-bold text-white mt-3 mb-5">Contact Me</h3>
+      <form class="mx-md-5" action="">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body px-4">
+                <!-- Name -->
+                <div class="md-form md-outline mt-0">
+                  <input type="text" id="name" class="form-control">
+                  <label for="name">Your Name</label>
+                </div>
+                <!-- Email -->
+                <div class="md-form md-outline">
+                  <input type="text" id="email" class="form-control">
+                  <label for="email">Your Email Address</label>
+                </div>
+                <!-- Message -->
+                <div class="md-form md-outline">
+                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit inquiry</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mt-md-4 mb-4 text-white">
+            <h5 class="font-weight-bold">Address</h5>
+            <p class="mb-0">Bagaha, West-Champaran</p>
+            <p class="mb-0">Bihar, 845105</p>
+            <p class="mb-4 pb-2">India</p>
+            <h5 class="font-weight-bold">Phone</h5>
+            <p class="mb-4 pb-2">+917087993031</p>
+            <h5 class="font-weight-bold">Email</h5>
+            <p>araj65311@gmail.com</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!--Section: Content-->
+</div>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact Me</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Contact Me</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="mx-md-5" action="">
+          <div class="md-form">
+            <div class="card">
+              <div class="card-body">
+                <!-- Name -->
+                <div class="md-form md-outline mt-0">
+                  <input type="text" id="name" class="form-control">
+                  <label for="name">Your Name</label>
+                </div>
+                <!-- Email -->
+                <div class="md-form md-outline">
+                  <input type="text" id="email" class="form-control">
+                  <label for="email">Your Email Address</label>
+                </div>
+                <!-- Message -->
+                <div class="md-form md-outline">
+                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+              </div>
+            </div>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

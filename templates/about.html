@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+about
+{% endblock %}
+{% block content %}
+{%for about_me_is in about_me%}
+<div class="row sizing d-flex justify-content-center" style="height:83vh;">
+    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+        <img src="{{about_me_is.about_image.url}}" alt="my_about_image" style="height:100vh">
+    </div>
+    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+        <div>
+            <h1>{{about_me_is.about_title}}</h1>
+            <p>{{about_me_is.about_description}}</p>
+        </div>
+    </div>
+  </div>
+{%endfor%}
+{% endblock %}

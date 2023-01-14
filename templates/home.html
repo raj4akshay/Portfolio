@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block link%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/one.css'%}"/>
+{% endblock %}
+{% block titile %}
+home
+{% endblock %}
+{% block content %}
+<div class="row sizing d-flex justify-content-center ">
+    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+        <div class="detail">
+        <h1>i am Akshay <span>Raj</span></h1>
+        <p>This is my official portfolio website to show all
+            <br> Details and work experince of myself.</p>
+        <a href="#"> DOWNLOAD CV</a>
+        </div>
+    </div>
+    <div class="col-sm-6 image">
+        {%for images_profile in images%}
+        <img src="{{images_profile.aki_pic.url }}" alt="pic is not there" class="akshay" style="height:100vh">
+        {%endfor%}
+    </div>
+  </div>
+
+<div class="row d-flex justify-content-center ">
+    {%for card_langs in cards_lang%}
+  <div class="col p-3 d-flex align-items-center justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="{{card_langs.card_image.url}}" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{card_langs.card_title}}</h5>
+        <p class="card-text">{{card_langs.card_description}}
+        </p>
+           <a href="#"> SHOW </a>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock%}

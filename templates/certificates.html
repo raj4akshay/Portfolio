@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+certificate
+{% endblock %}
+{% block content %}
+<div class="row d-flex justify-content-center ">
+    {%for degrees in degree%}
+  <div class="col p-3 d-flex align-items-center justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="{{degrees.certificate_image.url}}" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{degrees.certificate_title}}</h5>
+        <p class="card-text">{{degrees.certificate_description}}
+        </p>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}
